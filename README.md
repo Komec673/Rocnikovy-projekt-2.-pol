@@ -46,4 +46,4 @@ Jádro 1: Detekuje moment úderu. Jakmile úder skončí, jádro 1 data zkomprim
 | **Cena práce (vývoj)** | Zahrnuta v ceně produktu | **~12 000 Kč+** (vyčíslení 60+ hodin vývoje: ladění filtrů, kalibrace, 3D tisk a programování BLE) |
 ## Příklad kódu v MicroPythonu
 Tento zjednodušený skript ukazuje, jak Pico 2 W monitoruje zrychlení, a pokud detekuje prudký pohyb (švih), spustí vysokorychlostní záznam pro pozdější odeslání.
-![Kód](kod.png)
+![Kód](kod.png) s kódem mi pomohlo Google Gemini
