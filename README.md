@@ -4,13 +4,13 @@ Projekt porovná profesionální systémy (např. Zepp Tennis nebo Blast Motion)
 ## Průzkum
 ### Komerční systémy
 Profesionální řešení se zaměřují na extrémní miniaturizaci, aerodynamiku a pokročilé softwarové algoritmy pro rozpoznávání typů úderů.
-**Příklad**: Zepp Tennis, Blast Motion, Garmin TruSwing
-**Typ zařízení**: Malý modul (často tvaru "mince" nebo válečku) pevně nacvaknutý na koncovku (butt cap) rakety nebo hokejky.
-**Primární senzory**: 6-osé až 9-osé IMU jednotky. Často kombinují standardní akcelerometr pro plynulý pohyb a speciální High-G akcelerometr (schopný měřit přetížení až do +- 100g nebo 200g) pro zachycení tvrdého nárazu do míčku/puku.
-**Sledované metriky**: Rychlost švihu (km/h), úhlová rychlost rotace, úhel sklonu pálky v momentě impaktu, čas nápřahu vs. švihu (tempo) a 3D trajektorie pohybu.
-**Zpracování dat**: Výkonné jednočipové mikrokontrolery s nízkou spotřebou (např. Nordic Semiconductor nRF řady). Data jsou filtrována přímo v čipu a odesílána v reálném čase.
-**Přesnost**: Extrémně vysoká vzorkovací frekvence (často 1000 Hz a více), která zachytí i mikrosekundový moment úderu.
-**Cena**: 4 500 Kč – 8 000 Kč za senzor + často nutné předplatné za pokročilé analýzy v aplikaci.
+- **Příklad**: Zepp Tennis, Blast Motion, Garmin TruSwing
+- **Typ zařízení**: Malý modul (často tvaru "mince" nebo válečku) pevně nacvaknutý na koncovku (butt cap) rakety nebo hokejky.
+- **Primární senzory**: 6-osé až 9-osé IMU jednotky. Často kombinují standardní akcelerometr pro plynulý pohyb a speciální High-G akcelerometr (schopný měřit přetížení až do +- 100g nebo 200g) pro zachycení tvrdého nárazu do míčku/puku.
+- **Sledované metriky**: Rychlost švihu (km/h), úhlová rychlost rotace, úhel sklonu pálky v momentě impaktu, čas nápřahu vs. švihu (tempo) a 3D trajektorie pohybu.
+- **Zpracování dat**: Výkonné jednočipové mikrokontrolery s nízkou spotřebou (např. Nordic Semiconductor nRF řady). Data jsou filtrována přímo v čipu a odesílána v reálném čase.
+- **Přesnost**: Extrémně vysoká vzorkovací frekvence (často 1000 Hz a více), která zachytí i mikrosekundový moment úderu.
+- **Cena**: 4 500 Kč – 8 000 Kč za senzor + často nutné předplatné za pokročilé analýzy v aplikaci.
 ### DIY projekt
 Napodobění těchto funkcí s využitím nového čipu RP2350 s jádry ARM Cortex-M33, která mají hardwarovou podporu pro matematické operace s plovoucí čárkou (FPU), což je ideální pro rychlé výpočty trajektorie.
 **Typ zařízení**: 3D tištěné pouzdro s integrovaným upevněním (např. pomocí pružného TPU materiálu) na konec hokejky či rakety.
