@@ -48,4 +48,12 @@ Jádro 1: Detekuje moment úderu. Jakmile úder skončí, jádro 1 data zkomprim
 Tento zjednodušený skript ukazuje, jak Pico 2 W monitoruje zrychlení, a pokud detekuje prudký pohyb (švih), spustí vysokorychlostní záznam pro pozdější odeslání.
 ![Kód](kod.png) S kódem mi pomohlo Google Gemini
 ## Příklad jak by vypadalo DIY řešení
-![Příklad vzhledu](obrazek.png)
+![Příklad vzhledu](obrazek.png) Vytvořeno Google Gemini
+## Citace
+Blast Motion. Online. Dostupné z: https://blastmotion.com/?srsltid=AfmBOooR523XwB3dc0oheqIS_iY-l_8zrVnWzn3zMGWOx_EVDLpAb7tr#gref. [cit. 2026-05-15].
+Garmin. Online. Dostupné z: https://www.garmin.com/en-US/blog/fitness/introducing-truswing-the-first-golf-club-swing-sensor-from-garmin-2/. [cit. 2026-05-15].
+Raspberry Pi Pico 2 W. Online. Dostupné z: https://pip-assets.raspberrypi.com/categories/1088-raspberry-pi-pico-2-w/documents/RP-008304-DS-2-pico-2-w-datasheet.pdf?disposition=inline. [cit. 2026-05-15].
+STMicroelectronics. Online. Dostupné z: https://www.st.com/resource/en/flyer/st14391_fllsm6dsox0619_lr.pdf. [cit. 2026-05-15].
+Analog Devices. Online. Dostupné z: https://www.analog.com/en/products/adxl375.html. [cit. 2026-05-15].
+MPU6050 Sensor Arduino Tutorial. Online. Dostupné z: https://youtu.be/a37xWuNJsQI?is=wstchurow-SvcVcr. [cit. 2026-05-15].
+Maul Mcwhorter. Online. Dostupné z: https://youtu.be/Krl_6N71uro?is=V_evfD2WLmDL6P-H. [cit. 2026-05-15].
