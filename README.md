@@ -13,12 +13,12 @@ Profesionální řešení se zaměřují na extrémní miniaturizaci, aerodynami
 - **Cena**: 4 500 Kč – 8 000 Kč za senzor + často nutné předplatné za pokročilé analýzy v aplikaci.
 ### DIY projekt
 Napodobění těchto funkcí s využitím nového čipu RP2350 s jádry ARM Cortex-M33, která mají hardwarovou podporu pro matematické operace s plovoucí čárkou (FPU), což je ideální pro rychlé výpočty trajektorie.
-**Typ zařízení**: 3D tištěné pouzdro s integrovaným upevněním (např. pomocí pružného TPU materiálu) na konec hokejky či rakety.
-**Primární senzory**: STMicroelectronics LSM6DSOX nebo ISM330DHCX (6-osé průmyslové IMU). Tyto senzory obsahují vestavěný strojek pro strojové učení (Machine Learning Core), který dokáže sám detekovat švih bez zatížení hlavního procesoru.
-**Mikrokontroler**: Raspberry Pi Pico 2 W. Nabízí dostatek výkonu pro složitou integraci zrychlení na rychlost a bezdrátové BLE vysílání.
-**Zpracování dat**: Využívá se tzv. Madgwickův nebo Kalmanův filtr pro fúzi dat z akcelerometru a gyroskopu. Výsledkem jsou kvaterniony (3D orientace), ze kterých aplikace vykreslí dráhu švihu
-**Komunikace**: Bluetooth Low Energy (BLE) integrované na Pico 2 W. Data se streamují do mobilní aplikace (či Python skriptu v PC) s nízkou latencí.
-**Cena**: 600 – 900 Kč za kompletní komponenty (Pico 2 W, IMU senzor, malá Li-Pol baterie, nabíjecí modul).
+- **Typ zařízení**: 3D tištěné pouzdro s integrovaným upevněním (např. pomocí pružného TPU materiálu) na konec hokejky či rakety.
+- **Primární senzory**: STMicroelectronics LSM6DSOX nebo ISM330DHCX (6-osé průmyslové IMU). Tyto senzory obsahují vestavěný strojek pro strojové učení (Machine Learning Core), který dokáže sám detekovat švih bez zatížení hlavního procesoru.
+- **Mikrokontroler**: Raspberry Pi Pico 2 W. Nabízí dostatek výkonu pro složitou integraci zrychlení na rychlost a bezdrátové BLE vysílání.
+- **Zpracování dat**: Využívá se tzv. Madgwickův nebo Kalmanův filtr pro fúzi dat z akcelerometru a gyroskopu. Výsledkem jsou kvaterniony (3D orientace), ze kterých aplikace vykreslí dráhu švihu
+- **Komunikace**: Bluetooth Low Energy (BLE) integrované na Pico 2 W. Data se streamují do mobilní aplikace (či Python skriptu v PC) s nízkou latencí.
+- **Cena**: 600 – 900 Kč za kompletní komponenty (Pico 2 W, IMU senzor, malá Li-Pol baterie, nabíjecí modul).
 ## Hlavní chyby a problémy u DIY řešení
 1. **Saturace (přesycení) senzoru při nárazu**
 - Problém: Běžně dostupné levné IMU senzory (např. MPU-6050) mají limit akcelerometru +- 16g. Při tvrdém úderu hokejkou do puku nebo raketou do tenisáku však vzniká rázové přetížení přesahující 50g až 100g. Graf zrychlení se v momentě úderu "zploští" (ořízne) a výpočet rychlosti selže.
