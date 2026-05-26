@@ -58,17 +58,19 @@ Tento zjednodušený skript ukazuje, jak Pico 2 W monitoruje zrychlení, a pokud
 5.  **Nabíjecí management:** 1x Miniaturní USB-C Li-Pol nabíjecí modul (např. na bázi MCP73831).
 6.  **Pouzdro a upevnění:** 3D tištěné díly (STL soubory viz sekce `cad/`), TPU filament pro flexibilní grip na rukojeť, PLA/PETG pro pevné šasi.
 7.  **Materiál pro sestavení:** Tenké vodiče (licna), smršťovací bužírky, oboustranná lepicí páska.
-### Hardware a zapojení
-| Komponent | Pin na součástce | Pin na Pico 2 W | Funkce / Poznámka |
+### Schéma zapojení
+| Zařízení | Pin na součástce | Pin na Pico 2 W (RP2350) | Poznámka / Funkce ve firmware |
 | :--- | :--- | :--- | :--- |
-| **Společné** | 3V3 / VIN | 3V3 (Out, Pin 36) | Napájení 3.3V pro logiku |
-| | GND | GND (např. Pin 38) | Společná zem |
-| **LSM6DSOX (IMU)** | SDA | GP16 (Pin 21) | I2C0 Data (primární) |
-| | SCL | GP17 (Pin 22) | I2C0 Clock (primární) |
-| **ADXL375 (High-G)** | SDA | GP18 (Pin 24) | I2C1 Data (sekundární) |
-| | SCL | GP19 (Pin 25) | I2C1 Clock (sekundární) |
-| **Baterie & Nabíječ** | BAT+ / BAT- | Nabíjecí modul | Připojit k nabíječi, ne přímo k Pico |
-| **Pico Napájení** | OUT+ / OUT- (Nabíječ) | VSYS (Pin 39) / GND | Napájení Pico z baterie/USB |
+| **LSM6DSOX (IMU)** | VIN | 3V3 (Out) (Pin 36) | Hlavní napájení logiky 3.3V |
+| **LSM6DSOX (IMU)** | GND | GND (Pin 38) | Společná zem |
+| **LSM6DSOX (IMU)** | SDA | **GP16** (Pin 21) | I2C0 Data (primární sběrnice) |
+| **LSM6DSOX (IMU)** | SCL | **GP17** (Pin 22) | I2C0 Clock (primární sběrnice) |
+| **ADXL375 (High-G)** | VIN | 3V3 (Out) (Pin 36) | Napájení senzoru |
+| **ADXL375 (High-G)** | GND | GND (Pin 33) | Společná zem |
+| **ADXL375 (High-G)** | SDA | **GP18** (Pin 24) | I2C1 Data (sekundární, dedikovaná) |
+| **ADXL375 (High-G)** | SCL | **GP19** (Pin 25) | I2C1 Clock (sekundární, dedikovaná) |
+| **Baterie (Li-Pol)** | B+ / B- | Nabíjecí modul | Připojit K NABÍJEČI, ne přímo k Pico |
+| **Nabíječ (USB-C)** | OUT+ / OUT- | **VSYS** / **GND** (Pin 39/40) | Hlavní napájení Pico z baterie/USB |
 ## Citace
 Blast Motion. Online. Dostupné z: https://blastmotion.com/?srsltid=AfmBOooR523XwB3dc0oheqIS_iY-l_8zrVnWzn3zMGWOx_EVDLpAb7tr#gref. [cit. 2026-05-15].
 
