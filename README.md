@@ -49,6 +49,26 @@ Tento zjednodušený skript ukazuje, jak Pico 2 W monitoruje zrychlení, a pokud
 ![Kód](kod.png) S kódem mi pomohlo Google Gemini
 ## Příklad jak by vypadalo DIY řešení
 ![Příklad vzhledu](obrazek.png) Vytvořeno Google Gemini
+## Postup konstrukce
+### Seznam komponentů
+1.  **Mikrokontroler:** 1x Raspberry Pi Pico 2 W (s čipem RP2350).
+2.  **Hlavní pohybový senzor (Low-G IMU):** 1x Breakout board s LSM6DSOX (6-osé IMU, I2C/SPI).
+3.  **Senzor nárazu (High-G akcelerometr):** 1x Breakout board s ADXL375 (3-osý, $\pm 200g$, I2C/SPI).
+4.  **Baterie:** 1x Li-Pol akumulátor 250mAh (max. rozměr cca 30x20x6mm pro integraci do rukojeti).
+5.  **Nabíjecí management:** 1x Miniaturní USB-C Li-Pol nabíjecí modul (např. na bázi MCP73831).
+6.  **Pouzdro a upevnění:** 3D tištěné díly (STL soubory viz sekce `cad/`), TPU filament pro flexibilní grip na rukojeť, PLA/PETG pro pevné šasi.
+7.  **Materiál pro sestavení:** Tenké vodiče (licna), smršťovací bužírky, oboustranná lepicí páska.
+### Hardware a zapojení
+| Komponent | Pin na součástce | Pin na Pico 2 W | Funkce / Poznámka |
+| :--- | :--- | :--- | :--- |
+| **Společné** | 3V3 / VIN | 3V3 (Out, Pin 36) | Napájení 3.3V pro logiku |
+| | GND | GND (např. Pin 38) | Společná zem |
+| **LSM6DSOX (IMU)** | SDA | GP16 (Pin 21) | I2C0 Data (primární) |
+| | SCL | GP17 (Pin 22) | I2C0 Clock (primární) |
+| **ADXL375 (High-G)** | SDA | GP18 (Pin 24) | I2C1 Data (sekundární) |
+| | SCL | GP19 (Pin 25) | I2C1 Clock (sekundární) |
+| **Baterie & Nabíječ** | BAT+ / BAT- | Nabíjecí modul | Připojit k nabíječi, ne přímo k Pico |
+| **Pico Napájení** | OUT+ / OUT- (Nabíječ) | VSYS (Pin 39) / GND | Napájení Pico z baterie/USB |
 ## Citace
 Blast Motion. Online. Dostupné z: https://blastmotion.com/?srsltid=AfmBOooR523XwB3dc0oheqIS_iY-l_8zrVnWzn3zMGWOx_EVDLpAb7tr#gref. [cit. 2026-05-15].
 
