@@ -51,12 +51,12 @@ Tento zjednodušený skript ukazuje, jak Pico 2 W monitoruje zrychlení, a pokud
 ![Příklad vzhledu](obrazek.png) Vytvořeno Google Gemini
 ## Postup konstrukce
 ### Seznam komponentů
-1.  **Mikrokontroler:** 1x Raspberry Pi Pico 2 W (s čipem RP2350).
+1.  **Mikrokontroler:** Raspberry Pi Pico 2 W (s čipem RP2350).
 2.  **Hlavní pohybový senzor (Low-G IMU):** 1x Breakout board s LSM6DSOX (6-osé IMU, I2C/SPI).
 3.  **Senzor nárazu (High-G akcelerometr):** 1x Breakout board s ADXL375 (3-osý, $\pm 200g$, I2C/SPI).
 4.  **Baterie:** 1x Li-Pol akumulátor 250mAh (max. rozměr cca 30x20x6mm pro integraci do rukojeti).
 5.  **Nabíjecí management:** 1x Miniaturní USB-C Li-Pol nabíjecí modul (např. na bázi MCP73831).
-6.  **Pouzdro a upevnění:** 3D tištěné díly (STL soubory viz sekce `cad/`), TPU filament pro flexibilní grip na rukojeť, PLA/PETG pro pevné šasi.
+6.  **Pouzdro a upevnění:** 3D tištěné díly, TPU filament pro flexibilní grip na rukojeť, PLA/PETG pro pevné šasi.
 7.  **Materiál pro sestavení:** Tenké vodiče (licna), smršťovací bužírky, oboustranná lepicí páska.
 ### Schéma zapojení
 | Zařízení | Pin na součástce | Pin na Pico 2 W (RP2350) | Poznámka / Funkce ve firmware |
@@ -69,7 +69,7 @@ Tento zjednodušený skript ukazuje, jak Pico 2 W monitoruje zrychlení, a pokud
 | **ADXL375 (High-G)** | GND | GND (Pin 33) | Společná zem |
 | **ADXL375 (High-G)** | SDA | **GP18** (Pin 24) | I2C1 Data (sekundární, dedikovaná) |
 | **ADXL375 (High-G)** | SCL | **GP19** (Pin 25) | I2C1 Clock (sekundární, dedikovaná) |
-| **Baterie (Li-Pol)** | B+ / B- | Nabíjecí modul | Připojit K NABÍJEČI, ne přímo k Pico |
+| **Baterie (Li-Pol)** | B+ / B- | Nabíjecí modul | Připojit k nabíječi |
 | **Nabíječ (USB-C)** | OUT+ / OUT- | **VSYS** / **GND** (Pin 39/40) | Hlavní napájení Pico z baterie/USB |
 ## Citace
 Blast Motion. Online. Dostupné z: https://blastmotion.com/?srsltid=AfmBOooR523XwB3dc0oheqIS_iY-l_8zrVnWzn3zMGWOx_EVDLpAb7tr#gref. [cit. 2026-05-15].
